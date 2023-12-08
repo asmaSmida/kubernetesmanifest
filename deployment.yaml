@@ -15,7 +15,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: flaskdemo
+        app: flaskdemo 
     spec:
       containers:
       - image: asmasmida13/dockertp:latest
