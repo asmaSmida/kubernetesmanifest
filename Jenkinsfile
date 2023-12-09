@@ -25,4 +25,14 @@ node {
     }
   }
 }
+    stage('Deploy to Minikube') {
+        steps {
+            script {
+                // Set the kubectl context to Minikube
+                sh "kubectl config use-context minikube"
+
+                // Apply the Kubernetes manifest
+                sh "kubectl apply -f deployment.yaml"
+            }
+        }
 }
